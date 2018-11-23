@@ -1,0 +1,29 @@
+#OCT-2018
+#C:\_Scripts\Update
+
+-1 Заапрувить апдейты на WSUS
+-1 Обновить ip list - updateForisIPlist.ps1
+
+0-isUpdatesDownloaded
+Проверить что апдейты закачались. Показывает количество апдейтов готовых к установке
+
+0-check_disk_space.ps1
+Проверить свободное место
+
+1-Copy-U-folder.ps1
+Скопировать католг "U" на C:\. Внутри "U" 2 файла: ForisUpdate.ps1 и log.txt. "U" находится в C:\_Scripts\Update\Teleport\U
+
+2-Create-Remove-Task.ps1
+Создет или удаляет таск от имени указаного админ юзера. Таск запускает скрипт C:\U\ForisUpdate.ps1
+
+3-Start-Task.ps1
+Стартует созданый таск
+
+4-Get-Logs.ps1
+Смотрит поледние 10 записей в файле C:\U\log.txt, состояние таска и процесса TiWorker
+
+5-Remove-U-folder.ps1
+Удаляет каталог "U"
+
+UPTIME.ps1
+аптайм
